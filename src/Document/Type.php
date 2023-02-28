@@ -3,6 +3,7 @@ namespace App\Document;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[MongoDB\Document]
 class Type
@@ -12,6 +13,7 @@ class Type
 
     #[MongoDB\Field(type: 'string')]
     #[Assert\NotBlank]
+    #[Groups("get")]
     #[Assert\Length(
         min: 2,
         max: 255,

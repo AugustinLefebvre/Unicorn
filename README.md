@@ -1,5 +1,6 @@
 # API routes
 `/api/get/friends`  
+---
 **method**: `GET`  
 **description**: gets all poppy alive friends  
 **parameters**: `none`  
@@ -10,16 +11,17 @@
         "id": "idFriend1",
         "name": "nameFriend1",
         "type": "typeFriend1",
-        "value": intValueFriend1,
+        "value": 1,
         "tags": ["tag1", "tag2"]
     },
-    {...}
+    {}
 ]
 ```
-where `{...}` means other friends JSON of the same format  
----
+where `{}` means other friends JSON of the same format  
+
 
 `/api/get/types`  
+---
 **method**: `GET`  
 **description**: gets all possible friend types  
 **parameters**: `none`  
@@ -27,20 +29,24 @@ where `{...}` means other friends JSON of the same format
 ```JSON
 [
     {"name":"type1"},
-    {...}
+    {}
 ]
 ```
-where `{...}` means other types JSON of the same format  
----
+where `{}` means other types JSON of the same format  
+
 
 `/api/get/friendby`  
+---
 **method**: `GET`  
 **description**: gets poppy friend(s) based on the given parameters  
 **parameters**:  
 - `string`: matches any friend attribute  
 - `JSON` containing any friend attribute key and its value  
+
 **examples**:  
-`friend 4`  
+```
+friend 4
+```  
 will match friends named friend 4, friends with a friend 4 tag and friends with a friend 4 type
 ```json
 {
@@ -62,16 +68,17 @@ will match friends named friend 4 who are of the type GOD
         "id": "idFriend1",
         "name": "nameFriend1",
         "type": "typeFriend1",
-        "value": intValueFriend1,
+        "value": 1,
         "tags": ["tag1", "tag2"]
     },
-    {...}
+    {}
 ]
 ```
-where `{...}` means other friends JSON of the same format  
----
+where `{}` means other friends JSON of the same format  
+
 
 `/api/post`  
+---
 **method**: `POST`  
 **description**: creates a new friend with the given parameters  
 **parameters**:  
@@ -109,14 +116,15 @@ where `{...}` means other friends JSON of the same format
         "id": "idFriend1",
         "name": "nameFriend1",
         "type": "typeFriend1",
-        "value": intValueFriend1,
+        "value": 1,
         "tags": ["tag1", "tag2"]
     }
 ]
 ```
----
+
 
 `/api/call/monster`  
+---
 **method**: `GET`  
 **description**: calls the monster to eat one of poppy's friend,
 - if you pass a friend ID the monster will target him
@@ -124,8 +132,10 @@ where `{...}` means other friends JSON of the same format
 - if the given friend ID is incorrect the monster will also target a random poppy friend
 - if the target is a god the monster will not eat him
 - if the target is a unicorn the monster will not eat it  
+
 **parameters**:  
 `string`: matches a friend ID  
+
 **returns**:
 ```JSON
 [
@@ -134,9 +144,10 @@ where `{...}` means other friends JSON of the same format
     }
 ]
 ```
----
+
 
 `/api/get/dedFriends`  
+---
 **method**: `GET`  
 **description**: gets all the friends who were eaten by the monster  
 **parameters**: `none`  
@@ -147,16 +158,17 @@ where `{...}` means other friends JSON of the same format
         "id": "idFriend1",
         "name": "nameFriend1",
         "type": "typeFriend1",
-        "value": intValueFriend1,
+        "value": 1,
         "tags": ["tag1", "tag2"]
     },
-    {...}
+    {}
 ]
 ```
-where `{...}` means other friends JSON of the same format  
----
+where `{}` means other friends JSON of the same format  
+
 
 `/api/update/value`  
+---
 **method**: `POST`  
 **description**: updates the friendship value of a given friend with the given value  
 **parameters**:  
@@ -188,12 +200,14 @@ where `{...}` means other friends JSON of the same format
         "id": "idFriend1",
         "name": "nameFriend1",
         "type": "typeFriend1",
-        "value": intNewValueFriend1,
+        "value": 1,
         "tags": ["tag1", "tag2"]
     }
 ]
 ```
+
 ---
+
 ## dev only
 `/setTestData`  
 **description**: sets basic test data  

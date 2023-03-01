@@ -1,7 +1,9 @@
 # How to setup
 **requires**: `docker`, `docker-compose`  
+
+go to projet root and run
 ```
-docker build . -f .\docker\Dockerfile -t unicorn
+docker build . -f ./docker/Dockerfile -t unicorn
 ```
 ```
 docker-compose up -d

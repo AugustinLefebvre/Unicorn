@@ -1,3 +1,14 @@
+# How to setup
+**requires**: `docker`, `docker-compose`  
+```
+docker build . -f .\docker\Dockerfile -t unicorn
+```
+```
+docker-compose up -d
+```
+Project launches on localhost:8080
+Once both containers are correctly started, go to localhost:8080/setTestData once to get some basic test data
+
 # API routes
 `/api/get/friends`  
 ---

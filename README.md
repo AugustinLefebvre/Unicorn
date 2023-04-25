@@ -1,3 +1,4 @@
+# This project is far from finished
 # How to setup
 **requires**: `docker`, `docker-compose`  
 
